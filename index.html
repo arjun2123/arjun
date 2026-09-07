@@ -114,7 +114,73 @@
             margin: 0 auto 2rem;
             color: #475569;
         }
+/* --- Hero Profile Photo --- */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 5% 60px;
+}
 
+.hero-container {
+    max-width: 1100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.hero-content {
+    flex: 1;
+    text-align: left;
+}
+
+.hero-photo {
+    flex: 0 0 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-photo img {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 50%;
+    border: 6px solid var(--accent-color);
+    box-shadow: 0 15px 35px rgba(15, 23, 42, 0.20);
+    background: var(--white);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .hero {
+        min-height: auto;
+        padding: 120px 5% 60px;
+    }
+
+    .hero-container {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .hero-photo {
+        flex: none;
+    }
+
+    .hero-photo img {
+        width: 210px;
+        height: 210px;
+    }
+}
         .btn {
             display: inline-block;
             padding: 0.8rem 2rem;
@@ -446,18 +512,40 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
+ <!-- Hero Section -->
+<section class="hero">
+    <div class="hero-container">
+
         <div class="hero-content">
             <h1>Arjun Rathakrishnan</h1>
+
             <h2>Fire Fighting & Mechanical Technician</h2>
-            <p>Experienced in fire-fighting equipment inspection, maintenance, troubleshooting, and safety compliance. Based in Kuwait, dedicated to operational excellence in the oil & gas and industrial sectors.</p>
+
+            <p>
+                Experienced in fire-fighting equipment inspection,
+                maintenance, troubleshooting, and safety compliance.
+                Based in Kuwait, dedicated to operational excellence
+                in the oil & gas and industrial sectors.
+            </p>
+
             <div>
                 <a href="#contact" class="btn">Get in Touch</a>
-                <a href="https://drive.google.com/file/d/1ZwbctP-PVes5N9g2574YB6rbgI_vUv9d/view?usp=drive_link" class="btn btn-outline">Download CV</a>
+
+                <a href="https://drive.google.com/file/d/1ZwbctP-PVes5N9g2574YB6rbgI_vUv9d/view?usp=drive_link"
+                   class="btn btn-outline">
+                    Download CV
+                </a>
             </div>
         </div>
-    </section>
+
+        <!-- Profile Photo -->
+        <div class="hero-photo">
+            <img src="profile.jpg"
+                 alt="Arjun Rathakrishnan - Fire Fighting & Mechanical Technician">
+        </div>
+
+    </div>
+</section>
 
     <!-- About Section -->
     <section id="about">
